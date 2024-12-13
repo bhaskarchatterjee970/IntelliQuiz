@@ -109,6 +109,5 @@ btn.addEventListener("click", () => {
                 Your score is <span class="font-bold text-blue-500">${score}</span>
             </p>
             <button class="reolad-button mx-24 md:mx-[250px] p-2 px-3 bg-slate-700 hover:bg-slate-800  text-white rounded-lg" onclick="location.reload()">Play Again 🔄</button>`;
-
   }
 });
