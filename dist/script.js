@@ -67,7 +67,7 @@ let score = 0
 
 
 
-//------LOAD QUIZ----
+//------LOAD QUIZ----step1
 loadQuiz = ()=>{
     const {question, options} = quizData[currentQuiz]
     // console.log(options);
@@ -80,7 +80,7 @@ loadQuiz = ()=>{
 loadQuiz()
 
 
-//---get th id of selected option----
+//---get th id of selected option----step3
 getSeletedOption = () => {
     let option_id;
     answerElm.forEach((elem, index) => {
@@ -91,13 +91,14 @@ getSeletedOption = () => {
     return option_id;  
 }
 
+//----step4----
 deselectOption = () => {
     answerElm.forEach((currElem) => {
         currElem.checked = false
     })
 }
 
-
+//----step2----
 btn.addEventListener('click', () => {
     // e.preventDefault()
     const selectedAnswer = getSeletedOption() 
