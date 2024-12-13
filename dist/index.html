@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>IntelliQuiz</title>
+</head>
+<body class="bg-gradient-to-r from-blue-500 via-pink-400 to-purple-500 flex items-center justify-center h-screen">
+    <div class="quiz-section w-full max-w-4xl h-full md:h-4/5 bg-transparent flex items-center justify-center flex-col p-4">
+        <div class="quiz w-full md:w-4/5 h-auto md:h-auto bg-white rounded-lg shadow-lg p-4 md:p-6">
+            <h2 class="question font-bold text-2xl md:text-3xl mb-4 text-center md:text-left">Quiz Question</h2>
+            <hr class="border-1 mb-4"/>
+            <ul class="space-y-4">
+                <li class="flex items-center space-x-4">
+                    <input class="answer w-5 h-5 border-2 border-blue-500 rounded-full focus:ring-2 focus:ring-blue-400" name="answer" type="radio" id="option_1" />
+                    <label for="option_1" class="option_1 text-lg font-medium text-gray-700 hover:text-blue-600 transition-all cursor-pointer">Option 1</label>
+                </li>
+                <li class="flex items-center space-x-4">
+                    <input class="answer w-5 h-5 border-2 border-blue-500 rounded-full focus:ring-2 focus:ring-blue-400" name="answer" type="radio" id="option_2" />
+                    <label for="option_2" class="option_2 text-lg font-medium text-gray-700 hover:text-blue-600 transition-all cursor-pointer">Option 2</label>
+                </li>
+                <li class="flex items-center space-x-4">
+                    <input class="answer w-5 h-5 border-2 border-blue-500 rounded-full focus:ring-2 focus:ring-blue-400" name="answer" type="radio" id="option_3" />
+                    <label for="option_3" class="option_3 text-lg font-medium text-gray-700 hover:text-blue-600 transition-all cursor-pointer">Option 3</label>
+                </li>
+                <li class="flex items-center space-x-4">
+                    <input class="answer w-5 h-5 border-2 border-blue-500 rounded-full focus:ring-2 focus:ring-blue-400" name="answer" type="radio" id="option_4" />
+                    <label for="option_4" class="option_4 text-lg font-medium text-gray-700 hover:text-blue-600 transition-all cursor-pointer">Option 4</label>
+                </li>
+            </ul>
+            <hr class="my-6"/>
+            <div class="btn flex justify-center">
+                <button 
+                    type="submit" 
+                    id="submit" 
+                    class="bg-blue-500 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-all mt-2">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
