@@ -125,7 +125,7 @@ detailBtn.addEventListener('click', () => {
   // startBtn.style.display = "block"
   welcome.style.display = "none"
   detailBtn.style.display = "none"
-  details.innerHTML = `<div class="w-auto flex text-center justify-center items-center flex-col space-y-1 bg-white p-5 rounded-xl">
+  details.innerHTML = `<div class="w-auto flex text-center justify-center items-center flex-col space-y-3 shadow-slate-500 bg-white p-5 rounded-xl">
                         <h1 class="font-bold text-xl md:text-2xl">Quiz Topic: HTML, CSS, JavaScript</h1>
                         <p class="font-medium text-xl md:text-2xl text-gray-600">Total No of Question: 10</p>
                         <p class="font-medium text-xl md:text-2xl text-gray-600">Full Marks: 10</p>
