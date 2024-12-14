@@ -8,7 +8,13 @@
 </head>
 <body class="bg-gradient-to-r from-blue-500 via-blue-200 to-purple-500 flex items-center justify-center h-screen">
     <div class="quiz-section w-full max-w-4xl h-full md:h-4/5 bg-transparent flex items-center justify-center flex-col p-4">
-        <div class="quiz w-full md:w-4/5 h-auto md:h-auto bg-white rounded-lg shadow-lg p-4 md:p-6">
+        <h1 class="welcome font-bold text-3xl md:text-4xl mb-4">Welcome To IntelliQuiz</h1>
+        <div class="details flex justify-evenly sitems-center m-2">
+            <button id="start-game" class="bg-gray-100 mx-4 transition duration-300 hover:bg-green-500 hover:text-white px-5 md:px-10 py-4 font-bold shadow-lg rounded-lg">START QUIZ</button>
+            <button id="quiz-detail" class="bg-gray-800 text-white px-5 md:px-10 py-4 font-bold shadow-lg rounded-lg">QUIZ DETAILS</button>
+        </div>
+
+        <div class="quiz w-full hidden  md:w-4/5 h-auto md:h-auto bg-white rounded-lg shadow-lg p-4 md:p-6">
             <h2 class="question font-bold text-2xl md:text-3xl mb-4 text-center md:text-left">Quiz Question</h2>
             <hr class="border-1 mb-4"/>
             <ul class="space-y-4">

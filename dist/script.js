@@ -109,11 +109,42 @@ const opt2 = document.querySelector(".option_2");
 const opt3 = document.querySelector(".option_3");
 const opt4 = document.querySelector(".option_4");
 const btn = document.getElementById("submit");
+const welcome = document.querySelector('.welcome')
+const startBtn = document.getElementById('start-game')
+const quiz = document.querySelector(".quiz");
+const detailBtn = document.getElementById('quiz-detail')
+const details = document.querySelector('.details')
+
 
 // console.log(answerElm);
 
 let currentQuiz = 0;
 let score = 0;
+
+detailBtn.addEventListener('click', () => {
+  // startBtn.style.display = "block"
+  welcome.style.display = "none"
+  detailBtn.style.display = "none"
+  details.innerHTML = `<div class="w-auto flex text-center justify-center items-center flex-col space-y-1 bg-white p-5 rounded-xl">
+                        <h1 class="font-bold text-xl md:text-2xl">Quiz Topic: HTML, CSS, JavaScript</h1>
+                        <p class="font-medium text-xl md:text-2xl text-gray-600">Total No of Question: 10</p>
+                        <p class="font-medium text-xl md:text-2xl text-gray-600">Full Marks: 10</p>
+                        <button id="start-game" class="bg-gray-700 mx-4 transition duration-300 hover:bg-green-500 text-white hover:text-white px-5 md:px-10 py-4 font-bold shadow-lg rounded-lg">START QUIZ</button>
+                      </div>
+                      `
+})
+
+//Instead of directly attaching an event listener to the button, we add the listener to the document or a parent container.
+//Using e.target.id === 'start-game', we check if the clicked element is the dynamically added start-game button
+document.addEventListener('click', (e) => {
+  if (e.target && e.target.id === 'start-game') {
+    details.style.display = "none";
+    welcome.style.display = "none";
+    quiz.style.display = "block";
+    loadQuiz();
+  }
+});
+
 
 //------LOAD QUIZ----step1
 loadQuiz = () => {
@@ -125,7 +156,7 @@ loadQuiz = () => {
   opt3.innerHTML = options[2];
   opt4.innerHTML = options[3];
 };
-loadQuiz();
+
 
 //---get th id of selected option----step3
 getSeletedOption = () => {
@@ -159,7 +190,6 @@ btn.addEventListener("click", () => {
     deselectOption();
     loadQuiz();
   } else {
-    const quiz = document.querySelector(".quiz");
     quiz.innerHTML = `
             <h1 class="text-2xl md:text-4xl font-bold text-center text-blue-950 mb-4">
               🎉🎉🎉 Congratulations 🎉🎉🎉
