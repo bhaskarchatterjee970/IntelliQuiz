@@ -38,8 +38,67 @@ const quizData = [
   {
     question:
       "Which of the following is NOT a valid value for the position property in CSS?",
-    options: ["relative", "absolute", "infinite", "fixed"],
+    options: [
+      "relative", 
+      "absolute", 
+      "infinite", 
+      "fixed"
+    ],
     answer: 2,
+  },
+  {
+    question:
+      "What does the a tag in HTML define?",
+    options: [
+      "An image", 
+      "A Paragraph", 
+      "A heading", 
+      "A hyperlink"
+    ],
+    answer: 3,
+  },
+  {
+    question:
+      "Which method is used to find the length of a string in JavaScript?",
+    options: [
+      "length()",
+      "size()", 
+      "getLength()", 
+      "getSize()"
+    ],
+    answer: 1,
+  },
+  {
+    question:
+      "Which of the following is the correct syntax to write a function in JavaScript?",
+    options: [
+      "function = myFunction()", 
+      "function: myFunction()", 
+      "function myFunction()", 
+      "myFunction(): function"],
+    answer: 2,
+  },
+  {
+    question:
+      "Which attribute is used to uniquely identify an HTML element?",
+    options: [
+      "class", 
+      "id", 
+      "style", 
+      "name"
+    ],
+    answer: 1,
+  },
+  {
+    question:
+      "Which of the following is the correct way to write an if statement in JavaScript?",
+    options: [
+      "if x = 5 then", 
+      "if (x == 5)", 
+      "if x = 5", 
+      "if x = 5"
+    ],
+    answer: 1,
   },
 ];
 
@@ -60,7 +119,7 @@ let score = 0;
 loadQuiz = () => {
   const { question, options } = quizData[currentQuiz];
   // console.log(options);
-  questionElm.innerHTML = question;
+  questionElm.innerHTML = `${currentQuiz+1}: ${question}`;
   opt1.innerHTML = options[0];
   opt2.innerHTML = options[1];
   opt3.innerHTML = options[2];
@@ -93,7 +152,7 @@ btn.addEventListener("click", () => {
 //   console.log(selectedAnswer);
   //--check the answer is correct or not----
   if (selectedAnswer === quizData[currentQuiz].answer) {
-    score += 4;
+    score += 1;
   }
   currentQuiz++;
   if (currentQuiz < quizData.length) {
@@ -106,8 +165,8 @@ btn.addEventListener("click", () => {
               🎉🎉🎉 Congratulations 🎉🎉🎉
             </h1>
             <p class="text-xl text-center mb-6">
-                Your score is <span class="font-bold text-blue-500">${score}</span>
+                Your score is <span class="font-bold text-blue-500">${score}/${quizData.length}</span>
             </p>
-            <button class="reolad-button mx-24 md:mx-[250px] p-2 px-3 bg-slate-700 hover:bg-slate-800  text-white rounded-lg" onclick="location.reload()">Play Again 🔄</button>`;
+            <button class="text-center reolad-button mx-24 md:mx-[250px] p-2 px-3 bg-slate-700 hover:bg-slate-800  text-white rounded-lg" onclick="location.reload()">Play Again 🔄</button>`;
   }
 });
