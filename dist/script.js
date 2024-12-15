@@ -1,4 +1,3 @@
-
   const frontendQuizData = [
     {
       question: "What does the <meta> tag in HTML do?",
@@ -102,7 +101,6 @@
       answer: 1,
     },
   ];
-  
   const javaQuizData = [
     {
       question: "What is the default value of a boolean variable in Java?",
@@ -165,7 +163,6 @@
       answer: 3,
     }
   ];
-  
   const pythonQuizData = [
     {
       question: "What is the default value of a variable in Python?",
@@ -489,15 +486,7 @@
       answer: 3,
     }
   ]
-  // const AllQuizes = [
-  //   { quizName: "Frontend", quizData: frontendQuizData },
-  //   { quizName: "Java", quizData: javaQuizData },
-  //   { quizName: "Python", quizData: pythonQuizData },
-  //   { quizName: "DSA", quizData: dsaQuizData },
-  //   { quizName: "OOPS", quizData: oopsQuizData },
-  //   { quizName: "OS", quizData: osQuizData },
-  // ];
-
+  
 
 const answerElm = document.querySelectorAll(".answer");
 const questionElm = document.querySelector(".question");
@@ -509,14 +498,10 @@ const btn = document.getElementById("submit");
 const welcome = document.querySelector('.welcome')
 const quiz = document.querySelector(".quiz");
 const quizSelection = document.querySelector('.quiz-selection')
-// const quizCard = document.querySelectorAll('.quiz-card')
 const startBtn =document.querySelectorAll('.start-game-Btn')
 
 
 
-
-
-// console.log(startBtn);
 
 let currentQuiz = 0;
 let score = 0;
@@ -524,15 +509,14 @@ let quizData = []
 
 
 
-
+//Clinking on the respective quiz button the dataset will be stored in quizdata
 startBtn.forEach((b)=>{
   b.addEventListener('click', (e) => {
     quizSelection.style.display = "none";
     welcome.style.display = "none";
     quiz.style.display = "block";
     const selectedQuiz = e.target.id
-    console.log(selectedQuiz);
-    // const quizData = AllQuizes.find(quiz => quiz.quizName === selectedQuiz).quizData;
+    // console.log(selectedQuiz);
     if(selectedQuiz === 'Frontend'){
       quizData = frontendQuizData
     }
@@ -559,10 +543,7 @@ startBtn.forEach((b)=>{
 
 //------LOAD QUIZ----step1
 loadQuiz = () => {
-  // const { question, options } = ;
-  console.log(quizData);
-  
-  
+  // console.log(quizData);
     const { question, options } = quizData[currentQuiz];
 
   // console.log(options);
