@@ -858,6 +858,7 @@ const welcome = document.querySelector('.welcome')
 const quiz = document.querySelector(".quiz");
 const quizSelection = document.querySelector('.quiz-selection')
 const startBtn =document.querySelectorAll('.start-game-Btn')
+const animationStatement = document.querySelector('.animation')
 
 
 
@@ -871,6 +872,7 @@ let quizData = []
 //Clinking on the respective quiz button the dataset will be stored in quizdata
 startBtn.forEach((b)=>{
   b.addEventListener('click', (e) => {
+    animationStatement.style.display = "none"
     quizSelection.style.display = "none";
     welcome.style.display = "none";
     quiz.style.display = "block";
